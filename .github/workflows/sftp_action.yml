@@ -13,7 +13,7 @@ jobs:
                 username: ${{ secrets.FTP_USERNAME }}
                 server: ${{ secrets.FTP_SERVER }}
                 port: ${{ secrets.FTP_PORT }}
-                local_path: './package.json'
-                remote_path: '/home/agentsyncstg-migration1/test-action/'
+                local_path: './src/'
+                remote_path: 'test-action/'
                 sftp_only: false
                 password: ${{ secrets.FTP_PASSWORD }}
