@@ -13,13 +13,13 @@ jobs:
               uses: SamKirkland/FTP-Deploy-Action@4.3.2
               with:
                 # ftp server
-                server: agentsyncstg.sftp.wpengine.com
+                server: '${{ secrets.FTP_SERVER }}'
                 # ftp username
-                username: agentsyncstg-migration1
+                username: '${{ secrets.FTP_USERNAME }}'
                 # ftp password
-                password: 9BQNz8uXPD99QDBpwx4A56YZkkB8hggP
+                password: '${{ secrets.FTP_PASSWORD }}'
                 # Server port to connect to (read your web hosts docs)
-                port: 2222
+                port: '${{ secrets.FTP_PORT }}'
                 # protocol to deploy with - ftp, ftps, or ftps-legacy
                 protocol: ftps
                 # Folder to upload from, must end with trailing slash /
