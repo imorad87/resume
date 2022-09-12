@@ -13,19 +13,19 @@ jobs:
               uses: SamKirkland/FTP-Deploy-Action@4.3.2
               with:
                 # ftp server
-                server: '${{ test_action.FTP_SERVER }}'
+                server: '${{ secrets.FTP_SERVER }}'
                 # ftp username
-                username: '${{ test_action.FTP_USERNAME }}'
+                username: '${{ secrets.FTP_USERNAME }}'
                 # ftp password
-                password: '${{ test_action.FTP_PASSWORD }}'
+                password: '${{ secrets.FTP_PASSWORD }}'
                 # Server port to connect to (read your web hosts docs)
-                port: '${{ test_action.FTP_PORT }}'
+                port: '${{ secrets.FTP_PORT }}'
                 # protocol to deploy with - ftp, ftps, or ftps-legacy
-                protocol: ftps
+                protocol: 'ftps'
                 # Folder to upload from, must end with trailing slash /
-                local-dir: ./src/
+                local-dir: './src/'
                 # Path to upload to on the server. Must end with trailing slash /
-                server-dir: /test_action/
+                server-dir: '/test_action/'
                 timeout: 180000
 
            
