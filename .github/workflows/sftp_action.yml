@@ -13,7 +13,7 @@ jobs:
                 username: ${{ secrets.FTP_USERNAME }}
                 server: ${{ secrets.FTP_SERVER }}
                 port: ${{ secrets.FTP_PORT }}
-                local_path: './static/*'
-                remote_path: '/var/www/app'
-                sftp_only: true
+                local_path: './pachakge.json'
+                remote_path: './test_action'
+                sftp_only: false
                 password: ${{ secrets.FTP_PASSWORD }}
