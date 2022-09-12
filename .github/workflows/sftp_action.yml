@@ -14,6 +14,6 @@ jobs:
                 server: ${{ secrets.FTP_SERVER }}
                 port: ${{ secrets.FTP_PORT }}
                 local_path: './pachakge.json'
-                remote_path: './test_action'
+                remote_path: 'test_action'
                 sftp_only: false
                 password: ${{ secrets.FTP_PASSWORD }}
