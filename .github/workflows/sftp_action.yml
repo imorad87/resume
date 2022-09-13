@@ -19,6 +19,6 @@ jobs:
                     # you can copy private_key from your *.pem file, keep format
                 password: '${{ secrets.FTP_PASSWORD }}'
                     # will put all file under this path
-                sourceDir: '/src/'
+                sourceDir: './src'
                     # files will copy to under remote_path
                 targetDir: '/test_action/'
