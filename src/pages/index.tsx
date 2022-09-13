@@ -1,8 +1,10 @@
-import { Typography } from "@mui/material";
+import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
+import { Typography, AppBar, Toolbar, IconButton } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const Home: NextPage = () => {
+// eslint-disable-next-line react/prop-types
+const Home: NextPage = ({ toggleTheme, selectedTheme }: any) => {
   return (
     <div>
       <Head>
@@ -12,7 +14,17 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Typography variant="h1">Hello World!</Typography>
+        <AppBar position="static" color="primary">
+          <Toolbar>
+            <Typography variant="h6" flexGrow={1}>
+              Islam Morad
+            </Typography>
+            <IconButton aria-label="theme switch" onClick={toggleTheme}>
+              {selectedTheme === "light" ? <DarkModeOutlined color="inherit" /> : <LightModeOutlined color="primary" />}
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        <Typography variant="h4 ">Hello World!</Typography>
       </main>
     </div>
   );

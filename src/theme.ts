@@ -1,19 +1,25 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+// import { red } from '@mui/material/colors';
 
 // Create a theme instance.
-const theme = createTheme({
+export const darkTheme = responsiveFontSizes(createTheme({
     palette: {
+        mode: 'dark',
         primary: {
-            main: '#556cd6',
+            main: '#f90e0e',
         },
         secondary: {
-            main: '#19857b',
+            main: '#f50057',
         },
         error: {
-            main: red.A400,
+            main: '#ff0000',
         },
     },
-});
 
-export default responsiveFontSizes(theme);
+}));
+
+export const lightTheme = responsiveFontSizes(createTheme({
+    palette: {
+        mode: 'light'
+    },
+}));
