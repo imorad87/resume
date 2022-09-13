@@ -8,17 +8,17 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
             - name: SFTP Push
-              uses: datanomi/SFTP-Push@v.1.2.2.1h
+              uses: AbleLincoln/push-to-sftp@v1.2
               with:
                     # username
                 username: '${{ secrets.FTP_USERNAME }}'
                     # your sftp server
-                server: '${{ secrets.FTP_SERVER }}'
+                host: '${{ secrets.FTP_SERVER }}'
                     # your sftp server port, default to 22
                 port: '${{ secrets.FTP_PORT }}'
                     # you can copy private_key from your *.pem file, keep format
-                ssh_private_key: '${{ secrets.FTP_PASSWORD }}'
+                password: '${{ secrets.FTP_PASSWORD }}'
                     # will put all file under this path
-                local_path: '/src/'
+                sourceDir: '/src/'
                     # files will copy to under remote_path
-                remote_path: '/test_action/'
+                targetDir: '/test_action/'
