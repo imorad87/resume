@@ -12,7 +12,7 @@ export const darkTheme = responsiveFontSizes(createTheme({
             main: '#f50057',
         },
         error: {
-            main: 'purple',
+            main: 'purple3',
         },
     },
 
