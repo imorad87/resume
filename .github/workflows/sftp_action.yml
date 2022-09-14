@@ -8,7 +8,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
             - name: SFTP Push
-              uses: zurb/sftp-upload-action@1.3
+              uses: AbleLincoln/push-to-sftp@v1.2
               with:
                     # username
                 username: '${{ secrets.FTP_USERNAME }}'
@@ -19,7 +19,6 @@ jobs:
                     # you can copy private_key from your *.pem file, keep format
                 password: '${{ secrets.FTP_PASSWORD }}'
                     # will put all file under this path
-                localDir: './src'
+                sourceDir: '/src/'
                     # files will copy to under remote_path
-                remoteDir: '/test_action/'
-                dryRun: false
+                targetDir: '/test_action/'
